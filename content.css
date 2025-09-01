@@ -8,12 +8,12 @@
     {
       "matches": ["https://web.telegram.org/*"],
       "js": ["content.js"],
-      "css": ["content.css"]   // 👈 Add this line
+      "css": ["content.css"]   
     }
   ],
   "icons": {
-    "16": "icons/16.png",
-    "48": "icons/48.png",
-    "128": "icons/128.png"
+    "16": "icons.png",
+    "48": "icons.png",
+    "128": "icons.png"
   }
 }
