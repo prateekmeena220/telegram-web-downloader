@@ -2,18 +2,18 @@
   "manifest_version": 3,
   "name": "TG Downloader",
   "version": "1.0",
-  "description": "Download Telegram Web videos .",
+  "description": "Download Telegram Web videos with progress bar.",
   "permissions": ["downloads", "scripting", "activeTab"],
   "content_scripts": [
     {
       "matches": ["https://web.telegram.org/*"],
       "js": ["content.js"],
-      "css": ["content.css"]
+      "css": ["content.css"]   
     }
   ],
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "icons.png",
+    "48": "icons.png",
+    "128": "icons.png"
   }
 }
