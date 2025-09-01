@@ -1,34 +1,27 @@
 {
+  "name": "TG Video Downloader",
+  "description": "Download Telegram videos as MP4",
   "manifest_version": 3,
-  "name": "TG Web Media Downloader (Personal)",
-  "version": "0.2.0",
-  "description": "Detect and download videos/photos/audio from web.telegram.org (personal use).",
-  "permissions": [
-    "storage",
-    "downloads",
-    "scripting",
-    "activeTab",
-    "tabs"
-  ],
-  "host_permissions": [
-    "https://web.telegram.org/*"
-  ],
+  "version": "1.1",
+  "permissions": ["downloads", "scripting", "activeTab"],
+  "host_permissions": ["https://web.telegram.org/*"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://web.telegram.org/*"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_idle"
+      "matches": ["https://web.telegram.org/*"],
+      "js": ["content.js"]
     }
   ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "TG Downloader"
-  }
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "libs/ffmpeg/ffmpeg.min.js",
+        "libs/ffmpeg/ffmpeg-core.js",
+        "libs/ffmpeg/ffmpeg-core.wasm"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
